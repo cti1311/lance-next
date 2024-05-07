@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
-import {AiFillCheckCircle, AiFillCloseCircle} from "react-icons/ai";
+import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -20,34 +20,58 @@ export default function Home() {
   };
   const [data, setData] = useState([]);
   useEffect(async () => {
-    const res = await fetch("http://localhost:3000/api/result");
-    const data = await res.json();
-    setData(data.suites);
+    let res = await fetch("https://sims.0xcti.tech/api/v1/status");
+    res = await res.json();
+    setData(res.data);
     console.log(data);
   }, []);
 
   const renderTest = (specs) => {
+    console.log(specs);
     return (
       <div className={styles.test}>
-        <p>{specs.title}</p>
-        <div>{specs.ok ? <AiFillCheckCircle color="green" size="1.2em"/> : <AiFillCloseCircle color="red" size="1.2em"/>}</div>
+        <p>{specs.testName}</p>
+        <div>
+          {specs.status ? (
+            <AiFillCheckCircle color="green" size="1.2em" />
+          ) : (
+            <AiFillCloseCircle color="red" size="1.2em" />
+          )}
+        </div>
       </div>
     );
   };
   const renderSuite = (suiteL1) => {
-    let f = suiteL1.suites?.map((suiteL2) => {
-      return (
-        <div className={styles.card} onClick={() => openModal(suiteL2)}>
-          <h3>{suiteL2.title}</h3>
-          <div className={styles.test_container}>
-            {suiteL2.suites?.map((specs) => renderTest(specs))}
-          </div>
+    console.log(suiteL1);
+    let modes = Object.keys(suiteL1.tests);
+    modes = modes.sort();
+    let f = [];
+    for (let i of modes) {
+      let status = true;
+      for (let j in suiteL1.tests[i]) {
+        if (suiteL1.tests[i][j].status == false) {
+          status = false;
+          break;
+        };
+      }
+      f.push({
+        testName: i,
+        status: status,
+      });
+    }
+    console.log(suiteL1.paymentMode);
+    return (
+      <div className={styles.card} onClick={() => openModal(suiteL2)}>
+        <h3>{suiteL1.paymentMode}</h3>
+        <div className={styles.test_container}>
+        {f.map((suiteL2) => (
+            renderTest(suiteL2)
+        ))}
         </div>
-      );
-    })
-    return f
+      </div>
+    );
   };
-
+  console.log(data)
   return (
     <div className={styles.result_container}>
       {data.map((suiteL1) => renderSuite(suiteL1))}

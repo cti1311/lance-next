@@ -1,608 +1,206 @@
 export default function handler(req, res) {
-  res.status(200).json({ "suites": [
+  res.status(200).json([
     {
-      "title": "Card.test.js",
-      "file": "Card.test.js",
-      "line": 0,
-      "column": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "CC",
-          "file": "Card.test.js",
-          "line": 8,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Non-seamless",
-              "file": "Card.test.js",
-              "line": 9,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "41111111111111115",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "status": "timedOut",
-                          "duration": 30013,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": [
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJzdWl0ZSIsInZhbHVlIjoiU3VpdGUifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJzdWJTdWl0ZSIsInZhbHVlIjoic3ViU3VpdGUifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJmZWF0dXJlIiwidmFsdWUiOiJmZWF0dXJlIn1dfQ=="
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJwYWNrYWdlIiwidmFsdWUiOiJ0eXBlc2NyaXB0In1dfQ=="
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7InZhbHVlIjoiaWQiLCJuYW1lIjoiQVNfSUQifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJwYXJlbnRTdWl0ZSIsInZhbHVlIjoicGFyZW50U3VpdGUifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJzdG9yeSIsInZhbHVlIjoic3RvcnkifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJvd25lciIsInZhbHVlIjoib3duZXIifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJlcGljIiwidmFsdWUiOiJlcGljIn1dfQ=="
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJmcmFtZXdvcmsiLCJ2YWx1ZSI6ImNyaXRpY2FsIn1dfQ=="
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJsZWFkIiwidmFsdWUiOiJsZWFkIn1dfQ=="
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJ0ZXN0TWV0aG9kIiwidmFsdWUiOiJtZXRob2QifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJob3N0IiwidmFsdWUiOiJob3N0In1dfQ=="
-                            }
-                          ]
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Card.test.js",
-                  "line": 11,
-                  "column": 7
-                }
-              ]
-            },
-            {
-              "title": "Seamless",
-              "file": "Card.test.js",
-              "line": 50,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "41111111111111115a",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "status": "timedOut",
-                          "duration": 30009,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "steps": [
-                            {
-                              "title": "Log in",
-                              "duration": 1289
-                            },
-                            {
-                              "title": "Log in",
-                              "duration": 26008,
-                              "error": {
-                                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/https:\\/\\/acssimuat.payubiz.in\\/pg\\//\u001b[39m\nReceived string:  \u001b[31m\"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for selector \":root\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/backPress\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/paymentoptions\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/paymentoptions\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n",
-                                "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/https:\\/\\/acssimuat.payubiz.in\\/pg\\//\u001b[39m\nReceived string:  \u001b[31m\"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for selector \":root\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/backPress\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/paymentoptions\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/paymentoptions\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\u001b[2m  -   selector resolved to <html>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://apitest.payu.in/public/#/ca2d00347ed3cb6164b8f96a57476285a78ede8fcf64b24e75d800853ec825f6/cards\"\u001b[22m\n\n    at C:\\Users\\user\\Desktop\\lance\\tests\\Card.test.js:77:28\n    at C:\\Users\\user\\Desktop\\lance\\tests\\Card.test.js:65:9"
-                              }
-                            }
-                          ],
-                          "attachments": [
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJzdWl0ZSIsInZhbHVlIjoiU3VpdGUifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJzdWJTdWl0ZSIsInZhbHVlIjoic3ViU3VpdGUifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJmZWF0dXJlIiwidmFsdWUiOiJmZWF0dXJlIn1dfQ=="
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlsibGFiZWwiXX0="
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7InZhbHVlIjoiaWQiLCJuYW1lIjoiQVNfSUQifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJwYXJlbnRTdWl0ZSIsInZhbHVlIjoicGFyZW50U3VpdGUifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJzdG9yeSIsInZhbHVlIjoic3RvcnkifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJvd25lciIsInZhbHVlIjoib3duZXIifV19"
-                            },
-                            {
-                              "name": "allure-metadata.json",
-                              "contentType": "application/vnd.allure.metadata+json",
-                              "body": "eyJsYWJlbHMiOlt7Im5hbWUiOiJlcGljIiwidmFsdWUiOiJlcGljIn1dfQ=="
-                            }
-                          ]
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Card.test.js",
-                  "line": 52,
-                  "column": 7
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      paymentMode: "UPI",
+      timeTaken: 13004,
+      testPassed: 0,
+      totalTests: 2,
+      averageTimePerTest: 6502,
+      tests: {
+        seamless: [
+          {
+            status: false,
+            timeTaken: 3003,
+            steps: [
+              {
+                step: "UPI loader page loaded",
+                status: false,
+                logs: 'Error: page.waitForURL: Timeout 3000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to "https://apitest.payu.in/public/#/*/upiLoader" until "load"\n============================================================',
+              },
+            ],
+            testName: "UPI - 999999999@upi",
+          },
+        ],
+        nonseamless: [
+          {
+            status: false,
+            timeTaken: 10001,
+            steps: [
+              {
+                step: "Checkout page loaded ( L1 ) page loaded",
+                status: false,
+                logs: 'Error: page.waitForURL: Timeout 10000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to "https://apitest.payu.in/public/#/*" until "load"\n============================================================',
+              },
+            ],
+            testName: "UPI - 999999999@upi",
+          },
+        ],
+      },
     },
     {
-      "title": "Netbanking.test.js",
-      "file": "Netbanking.test.js",
-      "line": 0,
-      "column": 0,
-      "specs": [
-        {
-          "title": "NB - SBIB",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 28514,
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "file": "Netbanking.test.js",
-          "line": 8,
-          "column": 3
-        },
-        {
-          "title": "NB - AXIB",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 28795,
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "file": "Netbanking.test.js",
-          "line": 8,
-          "column": 3
-        }
-      ]
+      paymentMode: "CASH",
+      timeTaken: 12217,
+      testPassed: 1,
+      totalTests: 2,
+      averageTimePerTest: 6108.5,
+      tests: {
+        nonseamless: [
+          {
+            status: false,
+            timeTaken: 10005,
+            steps: [
+              {
+                step: "UPI loader page loaded",
+                status: false,
+                logs: 'Error: page.waitForURL: Timeout 10000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to "https://apitest.payu.in/public/#/*" until "load"\n============================================================',
+              },
+            ],
+            testName: "AMON",
+          },
+        ],
+        seamless: [
+          {
+            status: true,
+            timeTaken: 2212,
+            steps: [
+              { step: "PG page loaded", status: true, logs: "" },
+              { step: "OTP submitted", status: true, logs: "" },
+              { step: "Simulator page loaded", status: true, logs: "" },
+              { step: "Simulated success response", status: true, logs: "" },
+              { step: "Response validated", status: true, logs: "" },
+            ],
+            testName: "AMON",
+          },
+        ],
+      },
     },
     {
-      "title": "Upi.test.js",
-      "file": "Upi.test.js",
-      "line": 0,
-      "column": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "UPI",
-          "file": "Upi.test.js",
-          "line": 8,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Non-seamless",
-              "file": "Upi.test.js",
-              "line": 9,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "anything@payu",
-                  "ok": false,
-                  "tags": [
-                    "payu"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 4,
-                          "status": "timedOut",
-                          "duration": 30003,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Upi.test.js",
-                  "line": 11,
-                  "column": 7
-                },
-                {
-                  "title": "9999999999@upi",
-                  "ok": false,
-                  "tags": [
-                    "upi"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 5,
-                          "status": "timedOut",
-                          "duration": 30000,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Upi.test.js",
-                  "line": 11,
-                  "column": 7
-                }
-              ]
-            },
-            {
-              "title": "Seamless",
-              "file": "Upi.test.js",
-              "line": 41,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "anything@payu",
-                  "ok": false,
-                  "tags": [
-                    "payu"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "timedOut",
-                          "duration": 30019,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Upi.test.js",
-                  "line": 43,
-                  "column": 7
-                },
-                {
-                  "title": "9999999999@upi",
-                  "ok": false,
-                  "tags": [
-                    "upi"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 7,
-                          "status": "timedOut",
-                          "duration": 30009,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Upi.test.js",
-                  "line": 43,
-                  "column": 7
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      paymentMode: "NB",
+      timeTaken: 5490,
+      testPassed: 2,
+      totalTests: 2,
+      averageTimePerTest: 2745,
+      tests: {
+        seamless: [
+          {
+            status: true,
+            timeTaken: 2267,
+            steps: [
+              { step: "PG page loaded", status: true, logs: "" },
+              { step: "Credentials submitted", status: true, logs: "" },
+              { step: "Simulated page loaded", status: true, logs: "" },
+              { step: "Simulate Success Response", status: true, logs: "" },
+              { step: "Response validated", status: true, logs: "" },
+            ],
+            testName: "AXIB",
+          },
+        ],
+        nonseamless: [
+          {
+            status: true,
+            timeTaken: 3223,
+            steps: [
+              {
+                step: "Checkout page loaded ( L1 ) page loaded",
+                status: true,
+                logs: "",
+              },
+              {
+                step: "Netbanking Checkout page loaded ( L2 )",
+                status: true,
+                logs: "",
+              },
+              {
+                step: "Selected AXIB from the Netbanking list",
+                status: true,
+                logs: "",
+              },
+              { step: "Clicked procced button", status: true, logs: "" },
+              { step: "PG page loaded", status: true, logs: "" },
+              { step: "Credentials submitted", status: true, logs: "" },
+              { step: "Simulated page loaded", status: true, logs: "" },
+              { step: "Simulate Success Response", status: true, logs: "" },
+              { step: "Response validated", status: true, logs: "" },
+            ],
+            testName: "AXIB",
+          },
+        ],
+      },
     },
     {
-      "title": "Wallet.test.js",
-      "file": "Wallet.test.js",
-      "line": 0,
-      "column": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Wallet",
-          "file": "Wallet.test.js",
-          "line": 6,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Non-seamless",
-              "file": "Wallet.test.js",
-              "line": 7,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "Airtel Money",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 8,
-                          "status": "timedOut",
-                          "duration": 30003,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Wallet.test.js",
-                  "line": 9,
-                  "column": 7
-                },
-                {
-                  "title": "Test Wallet",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 9,
-                          "status": "timedOut",
-                          "duration": 30014,
-                          "error": {
-                            "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                          },
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "file": "Wallet.test.js",
-                  "line": 9,
-                  "column": 7
-                }
-              ]
-            },
-            {
-              "title": "Seamless",
-              "file": "Wallet.test.js",
-              "line": 28,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "Airtel Money",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 10,
-                          "status": "passed",
-                          "duration": 24626,
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "file": "Wallet.test.js",
-                  "line": 30,
-                  "column": 7
-                },
-                {
-                  "title": "Test Wallet",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 11,
-                          "status": "passed",
-                          "duration": 24551,
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "file": "Wallet.test.js",
-                  "line": 30,
-                  "column": 7
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ] })
+      paymentMode: "CC",
+      timeTaken: 16892,
+      testPassed: 1,
+      totalTests: 2,
+      averageTimePerTest: 8446,
+      tests: {
+        nonseamless: [
+          {
+            status: false,
+            timeTaken: 10000,
+            steps: [
+              {
+                step: "UPI loader page loaded",
+                status: false,
+                logs: 'Error: page.waitForURL: Timeout 10000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to "https://apitest.payu.in/public/#/*" until "load"\n============================================================',
+              },
+            ],
+            testName: "Mastercard",
+          },
+        ],
+        seamless: [
+          {
+            status: true,
+            timeTaken: 6892,
+            steps: [
+              { step: "PG page loaded", status: true, logs: "" },
+              { step: "OTP submitted", status: true, logs: "" },
+              { step: "Response validated", status: true, logs: "" },
+            ],
+            testName: "Mastercard",
+          },
+        ],
+      },
+    },
+    {
+      paymentMode: "DC",
+      timeTaken: 14291,
+      testPassed: 1,
+      totalTests: 2,
+      averageTimePerTest: 7145.5,
+      tests: {
+        seamless: [
+          {
+            status: false,
+            timeTaken: 5009,
+            steps: [
+              {
+                step: "PG page loaded",
+                status: false,
+                logs: 'Error: page.waitForURL: Timeout 5000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to "https://acssimuat.payubiz.in/pg/Cyber3DS/home" until "load"\n============================================================',
+              },
+            ],
+            testName: "VISA",
+          },
+        ],
+        nonseamless: [
+          {
+            status: true,
+            timeTaken: 9282,
+            steps: [
+              { step: "UPI loader page loaded", status: true, logs: "" },
+              { step: "Credentials submitted", status: true, logs: "" },
+              { step: "Credentials submitted", status: true, logs: "" },
+              { step: "Credentials submitted", status: true, logs: "" },
+              { step: "Credentials submitted", status: true, logs: "" },
+              { step: "PG page loaded", status: true, logs: "" },
+              { step: "OTP submitted", status: true, logs: "" },
+              { step: "Response validated", status: true, logs: "" },
+            ],
+            testName: "VISA",
+          },
+        ],
+      },
+    },
+  ]);
 }

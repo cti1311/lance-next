@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
+import moment from "moment";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -19,9 +20,11 @@ export default function Home() {
     setShowModal(true);
   };
   const [data, setData] = useState([]);
+  const [time, setTime] = useState([]);
   useEffect(async () => {
     let res = await fetch("https://sims.0xcti.tech/api/v1/status");
     res = await res.json();
+    setTime(res.timeStamp);
     setData(res.data);
     console.log(data);
   }, []);
@@ -52,7 +55,7 @@ export default function Home() {
         if (suiteL1.tests[i][j].status == false) {
           status = false;
           break;
-        };
+        }
       }
       f.push({
         testName: i,
@@ -61,21 +64,23 @@ export default function Home() {
     }
     console.log(suiteL1.paymentMode);
     return (
-      <div className={styles.card} onClick={() => openModal(suiteL2)}>
+      // <div className={styles.card} onClick={() => openModal(suiteL2)}>
+      <div className={styles.card}>
         <h3>{suiteL1.paymentMode}</h3>
         <div className={styles.test_container}>
-        {f.map((suiteL2) => (
-            renderTest(suiteL2)
-        ))}
+          {f.map((suiteL2) => renderTest(suiteL2))}
         </div>
       </div>
     );
   };
-  console.log(data)
+  console.log(data);
   return (
-    <div className={styles.result_container}>
-      {data.map((suiteL1) => renderSuite(suiteL1))}
-      <Modal closeModal={closeModal} show={showModal} {...modalData} />
-    </div>
+    <>
+      <div className={styles.timestamp}>Last updated: {moment(time).fromNow()}</div>
+      <div className={styles.result_container}>
+        {data.map((suiteL1) => renderSuite(suiteL1))}
+        <Modal closeModal={closeModal} show={showModal} {...modalData} />
+      </div>
+    </>
   );
 }

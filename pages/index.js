@@ -22,7 +22,7 @@ export default function Home() {
   const [data, setData] = useState([]);
   const [time, setTime] = useState([]);
   useEffect(async () => {
-    let res = await fetch("https://sims.0xcti.tech/api/v1/status");
+    let res = await fetch("https://api.0xcti.in/api/v1/status");
     res = await res.json();
     setTime(res.timeStamp);
     setData(res.data);

@@ -25,14 +25,13 @@ const Modal = ({ show, suites, closeModal }) => {
   const getFlowStatus = (flow) => {
     const tests = suites.tests[flow];
     if (!tests) return "unknown"; // In case there are no tests
-    const hasFailure = tests.some((test) =>
-      test.steps?.some((step) => !step.status)
-    );
-    const hasPartial = tests.some(
-      (test) =>
-        test.steps?.some((step) => !step.status) &&
-        test.steps?.some((step) => step.status)
-    );
+    const hasFailure = tests.some((test) => {
+      console.log(test)
+      return test.status == false;
+    });
+    const hasPartial = tests.some((test) => !test.status ) && tests.some((test) => test.status);
+    
+    console.log({hasFailure,hasPartial})
     if (hasPartial) return "partial";
     if (hasFailure) return "failed";
     return "passed";
@@ -46,14 +45,8 @@ const Modal = ({ show, suites, closeModal }) => {
   // Get overall suite status
   const getSuiteStatus = () => {
     const allTests = flows.flatMap((flow) => suites.tests[flow]);
-    const hasFailure = allTests.some((test) =>
-      test.steps.some((step) => !step.status)
-    );
-    const hasPartial = allTests.some(
-      (test) =>
-        test.steps.some((step) => !step.status) &&
-        test.steps.some((step) => step.status)
-    );
+    const hasFailure = allTests.some((test) => !test.status);
+    const hasPartial = allTests.some( test => !test.status ) && allTests.some((test) => test.status);
     if (hasPartial) return "partial";
     if (hasFailure) return "failed";
     return "passed";
@@ -67,10 +60,8 @@ const Modal = ({ show, suites, closeModal }) => {
       >
         <div className={style.modal_header}>
           <h2 className={style.modal_header_title}>
-            <span className={style.testx}>{paymentMode}{" "}</span>
-            <span
-              className={`${style.test_status} ${style[getSuiteStatus()]}`}
-            >
+            <span className={style.testx}>{paymentMode} </span>
+            <span className={`${style.test_status} ${style[getSuiteStatus()]}`}>
               {getSuiteStatus().toUpperCase()}
             </span>
           </h2>
@@ -83,27 +74,45 @@ const Modal = ({ show, suites, closeModal }) => {
             {flows.map((flow) => (
               <div key={flow} className={style.modal_sidebar_item}>
                 <h4
-                  className={`${selectedFlow === flow ? style.selectedFlow : style.card} `}
+                  className={`${
+                    selectedFlow === flow ? style.selectedFlow : style.card
+                  } `}
                   onClick={() => {
                     setSelectedFlow(flow);
                     setSelectedTest(suites.tests[flow][0]);
                   }}
                 >
                   {/* {getFlowStatus(flow) === "passed" ? "✅" : "❌"} */}
-                  <span>{flow.toUpperCase() }</span>
-                  <span className={`${style[getFlowStatus(flow)]} ${style.test_status}`}>{getFlowStatus(flow).toUpperCase()}</span>
+                  <span>{flow.toUpperCase()}</span>
+                  <span
+                    className={`${style[getFlowStatus(flow)]} ${
+                      style.test_status
+                    }`}
+                  >
+                    {getFlowStatus(flow).toUpperCase()}
+                  </span>
                 </h4>
                 {selectedFlow === flow && (
                   <ul>
                     {suites.tests[flow].map((test) => (
                       <li
                         key={test.testName}
-                        className={`${selectedTest === test ? style.selectedTest : style.card}`}
+                        className={`${
+                          selectedTest === test
+                            ? style.selectedTest
+                            : style.card
+                        }`}
                         onClick={() => setSelectedTest(test)}
                       >
                         {/* {test.status ? "✅" : "❌"} */}
                         {test.testName}
-                        <span className={`${style[getTestStatus(test)]} ${style.test_status}`}>{getTestStatus(test).toUpperCase()}</span>
+                        <span
+                          className={`${style[getTestStatus(test)]} ${
+                            style.test_status
+                          }`}
+                        >
+                          {getTestStatus(test).toUpperCase()}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -133,10 +142,17 @@ const TestDetails = ({ flow, test }) => (
     <ul>
       {test.steps.map((step, index) => (
         <li key={index} className={style.step}>
-          <span className={style.status_icon}>
-            {step.status ? "✅" : "❌"}
+          <span>
+            <span className={style.status_icon}>
+              {step.status ? "✅" : "❌"}
+            </span>
+            {step.step}
           </span>
-          <span>{step.step}</span>
+          {step.logs && (
+            <div className={style.logs}>
+              <pre>{step.logs}</pre>
+            </div>
+          )}
         </li>
       ))}
     </ul>

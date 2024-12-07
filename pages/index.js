@@ -22,7 +22,7 @@ export default function Home() {
   const [data, setData] = useState([]);
   const [time, setTime] = useState([]);
   useEffect(async () => {
-    let res = await fetch("https://api.0xcti.in/api/v1/status");
+    let res = await fetch("https://webhook.site/2a627d85-f15b-4c87-b300-fbeccfa4edab");
     res = await res.json();
     setTime(res.timeStamp);
     setData(res.data);
@@ -62,10 +62,10 @@ export default function Home() {
         status: status,
       });
     }
-    console.log(suiteL1.paymentMode);
+    console.log(suiteL1);
     return (
-      // <div className={styles.card} onClick={() => openModal(suiteL2)}>
-      <div className={styles.card}>
+      <div className={styles.card} onClick={() => openModal(suiteL1)}>
+      {/* <div className={styles.card}> */}
         <h3>{suiteL1.paymentMode}</h3>
         <div className={styles.test_container}>
           {f.map((suiteL2) => renderTest(suiteL2))}
@@ -79,7 +79,7 @@ export default function Home() {
       <div className={styles.timestamp}>Last updated: {moment(time).fromNow()}</div>
       <div className={styles.result_container}>
         {data.map((suiteL1) => renderSuite(suiteL1))}
-        <Modal closeModal={closeModal} show={showModal} {...modalData} />
+        <Modal closeModal={closeModal} show={showModal} suites={modalData} />
       </div>
     </>
   );

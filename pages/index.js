@@ -22,7 +22,7 @@ export default function Home() {
   const [data, setData] = useState([]);
   const [time, setTime] = useState([]);
   useEffect(async () => {
-    let res = await fetch("https://webhook.site/2a627d85-f15b-4c87-b300-fbeccfa4edab");
+    let res = await fetch("https://api.0xcti.in/api/v1/status");
     res = await res.json();
     setTime(res.timeStamp);
     setData(res.data);
